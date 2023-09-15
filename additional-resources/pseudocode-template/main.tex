@@ -1,0 +1,48 @@
+%
+% This template is borrowed from OCW MIT 6.006 Spring 2020 course.
+%
+\documentclass[12pt,twoside]{exam}
+
+\input{macros}
+\newcommand{\theproblemsetnum}{01} % modify this number to homework number.
+
+\title{CSCI 470 Pseudocode Template}
+
+\begin{document}
+
+% \handout{Homework Template \theproblemsetnum}
+\handout{\LaTeX \ Pseudocode Template} 
+
+\setlength{\parindent}{0pt}
+\medskip\hrulefill\medskip
+
+Here is a template to write a pseudocode in \LaTeX using package ``clrscode3e". This package has already been included in ``macros.tex" file (in line 19). 
+
+
+\begin{codebox}
+    \Procname{$\proc{Insertion-Sort}(A)$}
+        \li \For $j \gets 2$ \To $\attrib{A}{length}$
+            \Do
+            \li $\id{key} \gets A[j]$
+            \li \Comment Insert $A[j]$ into the sorted sequence
+            $A[1 \twodots j-1]$.
+            \li $i \gets j-1$
+            \li \While $i > 0$ and $A[i] > \id{key}$
+                \Do
+                \li $A[i+1] \gets A[i]$
+                \li $i \gets i-1$
+                \End
+            \li $A[i+1] \gets \id{key}$
+            \End
+\end{codebox}
+
+\begin{itemize}
+    \item ``codebox" is used to write a procedure within it. 
+    \item ``Procname" tag is used to initialize a procedure
+    \item ``proc" tag is used to write the name of the procedure 
+    \item ``Do" tag is used to start an indentation 
+    \item `li' tag is used write a statement 
+    \item keywords such as if, while, for, return, we just use the same keyword starting with an uppercase. Notice how ``\While", ``\For" are written in the pseudocode above. 
+\end{itemize}
+
+\end{document}
