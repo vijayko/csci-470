@@ -1,5 +1,5 @@
 ### Homework 02 
 
-Due Date: Wednesday, Sept 27, 9:10 AM EDT (Extended) 
+Due Date: Mon, Oct 2, 9:10 AM EDT (Final Deadline) 
 
-Homework 02 is from Chapter 6 Heaps only from CLRS. There are 4 problems you are required to solve, and two extra credit problems. 
+Homework 02 is from Chapter 6 Heaps and Chapter 7 Quicksort from CLRiS. There are 5 problems you are required to solve, and three extra credit problems. 
