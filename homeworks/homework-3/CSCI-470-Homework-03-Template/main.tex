@@ -15,8 +15,8 @@
 \setlength{\parindent}{0pt}
 \medskip\hrulefill\medskip
 
-{\bf Name:} ** Your Name**\\
-{\bf Student ID: } **your student ID** 
+{\bf Name:} ** Chad Toomer**\\
+{\bf Student ID: } **@02965969** 
 
 \medskip\hrulefill
 
@@ -75,56 +75,352 @@
 \textbf{Sorting in Linear Time}}
 \begin{problems}
 
-\problem  % Problem 1
+\problem  % Problem 3.1
+\begin{align*}
+\frac{n}{2} \cdot \lg n - \frac{n}{2} \le \lg(n!) \le n \cdot \lg n - \frac{n^2}{2} - \frac{1}{2}
+These bounds are asymptotically tight for \(\lg(n!)\).
+\end{align*}
 
-\problem  % Problem 2
+\problem  % Problem 3.3
+\textbf{ENQUEUE(Q, x):}
+\begin{align*}
+    \text{if } & (\text{rear} + 1) \, \%\, \text{size} == \text{front}: \\
+    & \quad \text{print("Error: Queue Overflow")} \\
+    \text{else:} \\
+    & \quad Q[\text{rear}] = x \\
+    & \quad \text{rear} = (\text{rear} + 1) \, \%\, \text{size}
+\end{align*}
+
+\textbf{DEQUEUE(Q):}
+\begin{align*}
+    \text{if } & \text{front} == \text{rear}: \\
+    & \quad \text{print("Error: Queue Underflow")} \\
+    \text{else:} \\
+    & \quad x = Q[\text{front}] \\
+    & \quad \text{front} = (\text{front} + 1) \, \%\, \text{size} \\
+    & \quad \text{return } x
+\end{align*}
 
 {\large 
 \textbf{Stack and Queues}}
 
-\problem  % Problem 3
+\problem  % Problem 3.4
+\begin{document}
 
-\problem  % Problem 4
+\textbf{HEAD-ENQUEUE(Q, x):}
+\begin{aligned}
+    & \text{if } (\text{head} - 1 + \text{size}) \% \text{size} == \text{tail}: \\
+    & \quad \text{print("Error: Deque Overflow")} \\
+    & \text{else:} \\
+    & \quad \text{head} = (\text{head} - 1 + \text{size}) \% \text{size} \\
+    & \quad \text{D[head]} = x
+\end{aligned}
+
+
+\textbf{TAIL-ENQUEUE(Q, x):}
+
+\begin{aligned}
+    & \text{if } (\text{tail} + 1) \% \text{size} == \text{head}: \\
+    & \quad \text{print("Error: Deque Overflow")} \\
+    & \text{else:} \\
+    & \quad \text{D[tail]} = x \\
+    & \quad \text{tail} = (\text{tail} + 1) \% \text{size}
+\end{aligned}
+
+
+\textbf{HEAD-DEQUEUE(Q):}
+
+\begin{aligned}
+    & \text{if head == tail:} \\
+    & \quad \text{print("Error: Deque Underflow")} \\
+    & \text{else:} \\
+    & \quad x = \text{D[head]} \\
+    & \quad \text{head} = (\text{head} + 1) \% \text{size} \\
+    & \quad \text{return } x
+\end{aligned}
+
+
+\textbf{TAIL-DEQUEUE(Q):}
+
+\begin{aligned}
+    & \text{if head == tail:} \\
+    & \quad \text{print("Error: Deque Underflow")} \\
+    & \text{else:} \\
+    & \quad \text{tail} = (\text{tail} - 1 + \text{size}) \% \text{size} \\
+    & \quad \text{return } \text{D[tail]}
+\end{aligned}
+
+
+\end{document}
+
+\problem  % Problem 3.5
 
 {\large 
 \textbf{Linked Lists and Binary Trees}}
 
 \problem
+\begin{document}
+
+\textbf{Answer:} The given nonrecursive procedure for reversing a singly linked list of (\ n \) elements using constant storage runs in ( \Theta(n) \)-time.
+
+\end{document}
 
 \problem
+\begin{document}
+
+\textbf{Recursive Procedure to Print Keys of a Binary Tree:}
+
+\begin{aligned}
+    & \text{Print-Keys}(node): \\
+    & \quad \text{if } node \neq \text{NULL:} \\
+    & \quad \quad \text{Print-Keys}(node.\text{left}) \\
+    & \quad \quad \text{Print-Keys}(node.\text{right}) \\
+    & \quad \quad \text{print}(node.\text{key})
+\end{aligned}
+
+\end{document}
 
 {\large 
 \textbf{Hash Tables}}
 
-\problem
+\problem problem % 3.7
+\begin{document}
 
-\problem
+\textbf{Conclusion:} To find the maximum element of a dynamic set ( S ) represented by a direct-address table ( T ) of length ( m ), we can iterate through the table ( T ) from index ( m ) down to 1 until we find the first non-empty slot, which corresponds to the maximum element in ( S ). The worst-case performance of this procedure is ( O(m) ).
 
-\problem
+\end{document}
+
+\problem problem % 3.8
+\begin{document}
+
+\textbf{Answer:} When inserting the keys 5, 28, 19, 15, 20, 33, 12, 17, 10 into a hash table with 9 slots and resolving collisions by chaining, the resulting hash table would have chains at various slots. The distribution of keys within these chains would depend on their respective hash values, calculated using the hash function (h(k) = k \mod 9\). The exact arrangement of keys in the chains would depend on the specific values of the keys and their computed hash values.
+
+\end{document}
+
+\problem problem % 3.9
+\begin{document}
+
+\textbf{Answer:} For the given hash table of size ( m = 1000 ) and hash function ( h(k) = lfloor m(kA mod 1) rfloor ) with ( A = frac{\sqrt{5} - 1}{2} ), the locations to which the keys 61, 62, 63, 64, and 65 are mapped can be computed using the formula. The specific computation involves substituting each key into the formula to obtain the corresponding hash values. The resulting hash values would determine the locations in the hash table.
+
+\end{document}
 
 {\large 
 \textbf{Binary Search Trees}}
 
-\problem
+\problem problem % 3.10
 
-\problem
+\begin{document}
 
-\problem
+\textbf{Difference between Binary Search Tree Property and Min-Heap Property:}
+The binary search tree property dictates that for every node (x) in the tree, the keys in the left subtree of (x) are less than the key of (x), and the keys in the right subtree of (x) are greater than the key of (x). This ensures that an in-order traversal of the tree results in sorted keys.
 
-\problem
+On the other hand, the min-heap property states that for every node (x) in the tree, the key of (x) is less than or equal to the keys of its children. This property ensures that the minimum key is always at the root.
 
-\problem
+\textbf{Min-Heap Property and Printing Keys in Sorted Order:}
+The min-heap property alone cannot be used to print out the keys of an (n)-node tree in sorted order in (O(n)) time. While the min-heap property guarantees that the root contains the minimum key, the keys in the left and right subtrees are not necessarily sorted in any specific order.
+
+To print the keys in sorted order using the min-heap property, you would need to perform an in-order traversal, which typically takes (O(n log n)) time for a binary heap. This is because you would need to visit each node, and for each node, you may need to traverse its entire height to reach its children.
+
+In contrast, the binary search tree property allows for an (O(n))-time in-order traversal, making it more suitable for efficiently printing out keys in sorted order.
+
+\end{document}
+
+\problem problem % 3.11
+\begin{document}
+
+\textbf{Preorder Tree Walk (Recursive):}
+[
+\begin{aligned}
+    & \text{Preorder-Walk}(node): \\
+    & \quad \text{if } node \neq \text{NULL}: \\
+    & \quad \quad \text{print}(node.\text{key}) \\
+    & \quad \quad \text{Preorder-Walk}(node.\text{left}) \\
+    & \quad \quad \text{Preorder-Walk}(node.\text{right})
+\end{aligned}
+]
+
+\textbf{Postorder Tree Walk (Recursive):}
+[
+\begin{aligned}
+    & \text{Postorder-Walk}(node): \\
+    & \quad \text{if } node \neq \text{NULL}: \\
+    & \quad \quad \text{Postorder-Walk}(node.\text{left}) \\
+    & \quad \quad \text{Postorder-Walk}(node.\text{right}) \\
+    & \quad \quad \text{print}(node.\text{key})
+\end{aligned}
+]
+
+\end{document}
+
+
+\problem problem % 3.12
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{Recursive TREE-MINIMUM:}
+[
+\begin{aligned}
+    & \text{Tree-Minimum}(node): \\
+    & \quad \text{if } node.\text{left} = \text{NULL}: \\
+    & \quad \quad \text{return } node \\
+    & \quad \text{else:} \\
+    & \quad \quad \text{return } \text{Tree-Minimum}(node.\text{left})
+\end{aligned}
+]
+
+\textbf{Recursive TREE-MAXIMUM:}
+[
+\begin{aligned}
+    & \text{Tree-Maximum}(node): \\
+    & \quad \text{if } node.\text{right} = \text{NULL}: \\
+    & \quad \quad \text{return } node \\
+    & \quad \text{else:} \\
+    & \quad \quad \text{return } \text{Tree-Maximum}(node.\text{right})
+\end{aligned}
+]
+
+\end{document}
+
+
+\problem problem % 3.13
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{TREE-PREDECESSOR:}
+[
+\begin{aligned}
+    & \text{Tree-Predecessor}(node): \\
+    & \quad \text{if } node.\text{left} \neq \text{NULL}: \\
+    & \quad \quad \text{return } \text{Tree-Maximum}(node.\text{left}) \\
+    & \quad \text{else:} \\
+    & \quad \quad \text{let } \text{y} = \text{node.parent} \\
+    & \quad \quad \text{while } \text{y} \neq \text{NULL} \text{ and } \text{node} = \text{y.left}: \\
+    & \quad \quad \quad \text{node} = \text{y} \\
+    & \quad \quad \quad \text{y} = \text{y.parent} \\
+    & \quad \quad \text{return } \text{y}
+\end{aligned}
+]
+
+\end{document}
+
+\problem problem % 3.14
+\usepackage{amsmath}
+
+\begin{document}
+
+\textbf{Recursive TREE-INSERT:}
+[
+\begin{aligned}
+    & \text{Tree-Insert}(root, key): \\
+    & \quad \text{if } root = \text{NULL}: \\
+    & \quad \quad \text{return } \text{Node}(key) \\
+    & \quad \text{else if } key < \text{root.key}: \\
+    & \quad \quad \text{root.left} = \text{Tree-Insert}(\text{root.left}, key) \\
+    & \quad \quad \text{root.left.parent} = \text{root} \\
+    & \quad \text{else:} \\
+    & \quad \quad \text{root.right} = \text{Tree-Insert}(\text{root.right}, key) \\
+    & \quad \quad \text{root.right.parent} = \text{root} \\
+    & \quad \text{return } \text{root}
+\end{aligned}
+]
+
+\end{document}
+This LaTeX code provides a recursive version of the TREE-INSERT procedure for inserting a key into a binary search tree. The code recursively traverses the tree based on the key values to find the appropriate position for the new node. If the key is smaller than the current node's key, it goes to the left subtree; otherwise, it goes to the right subtree. The procedure returns the modified tree after insertion. You can compile this code to generate a PDF document.
+
+
+
+
+
+
 
 \newpage
 {\large
 \textbf{Extra Credit}
 }
 
-\problem  
+\problem problem % 3.15
+\begin{document}
 
-\problem  
+\textbf{Nonrecursive In-Order Tree Walk:}
+[
+\begin{aligned}
+    & \text{Nonrecursive-InOrder-Walk(root):} \\
+    & \quad \text{stack} = \text{EmptyStack()} \\
+    & \quad \text{current} = \text{root} \\
+    & \quad \text{while } \text{current} \neq \text{NULL} \text{ or stack is not empty:} \\
+    & \quad \quad \text{while } \text{current} \neq \text{NULL:} \\
+    & \quad \quad \quad \text{Push}(\text{stack, current}) \\
+    & \quad \quad \quad \text{current} = \text{current.left} \\
+    & \quad \quad \text{current} = \text{Pop}(\text{stack}) \\
+    & \quad \quad \text{print}(\text{current.key}) \\
+    & \quad \quad \text{current} = \text{current.right} \\
+\end{aligned}
+]
 
-\problem
+\end{document}
+
+\problem problem % 3.16
+\begin{document}
+
+\textbf{Proof:}
+Let (U) be the universe of keys with (|U| > nm), and we are storing a set of (n) keys into a hash table of size (m). We are using the hash function (h(k)) to map keys to slots in the hash table.
+
+Consider the set (S) of all possible hash values:
+[ S = \{h(k) mid k in U\} ]
+
+Since (|U| > nm), and there are only (m) slots in the hash table, by the Pigeonhole Principle, there must exist at least one hash value (h) that corresponds to a subset of (U) with size at least (n). That is, there exists a subset (V \subseteq U) with (|V| \geq n) such that for all keys (k_1, k_2 \in V), (h(k_1) = h(k_2)).
+
+Now, consider the worst-case scenario where all the keys in (V) are inserted into the hash table, and they all hash to the same slot. In this case, the chain in that slot will have (|V| \geq n) keys.
+
+When searching for a key in this worst-case scenario, we may need to traverse the entire chain in that slot. Therefore, the worst-case searching time for hashing with chaining is (\Theta(n)).
+
+
+
+\end{document}
+
+
+\problem problem % 3.17
+
+\begin{document}
+
+[
+\begin{aligned}
+    & \text{DELETE}(T, z): \\
+    & \quad \text{if } z.\text{left} = \text{NULL}: \\
+    & \quad \quad \text{TRANSPLANT}(T, z, z.\text{right}) \\
+    & \quad \text{else if } z.\text{right} = \text{NULL}: \\
+    & \quad \quad \text{TRANSPLANT}(T, z, z.\text{left}) \\
+    & \quad \text{else:} \\
+    & \quad \quad \text{y} = \text{TREE-MINIMUM}(z.\text{right}) \\
+    & \quad \quad \text{if } y.\text{parent} \neq z: \\
+    & \quad \quad \quad \text{TRANSPLANT}(T, y, y.\text{right}) \\
+    & \quad \quad \quad \text{y.right} = z.\text{right} \\
+    & \quad \quad \quad \text{y.right.parent} = y \\
+    & \quad \quad \text{TRANSPLANT}(T, z, y) \\
+    & \quad \quad \text{y.left} = z.\text{left} \\
+    & \quad \quad \text{y.left.parent} = y \\
+\end{aligned}
+]
+
+\textbf{TRANSPLANT Procedure:}
+
+[
+\begin{aligned}
+    & \text{TRANSPLANT}(T, u, v): \\
+    & \quad \text{if } u.\text{parent} = \text{NULL}: \\
+    & \quad \quad T.\text{root} = v \\
+    & \quad \text{else if } u = u.\text{parent}.\text{left}: \\
+    & \quad \quad u.\text{parent}.\text{left} = v \\
+    & \quad \text{else:} \\
+    & \quad \quad u.\text{parent}.\text{right} = v \\
+    & \quad \text{if } v \neq \text{NULL}: \\
+    & \quad \quad v.\text{parent} = u.\text{parent} \\
+\end{aligned}
+]
+
+\end{document}
 
 \end{problems}
 
